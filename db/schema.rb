@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321034735) do
+ActiveRecord::Schema.define(version: 20160321044717) do
 
   create_table "project_images", force: :cascade do |t|
     t.string   "name"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160321034735) do
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "type"
+    t.string   "project_type"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.string   "header_file_name"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160321034735) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

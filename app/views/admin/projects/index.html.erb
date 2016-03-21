@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row">
+		<h2>My Projects</h2>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Thumb</th>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				<thead>
+				<tbody>
+					<% @projects.each do |project| %>
+						<tr>
+							<td><%= image_tag project.thumb.url(:thumb), alt: "project.name" %></td>
+							<td><%= project.name %></td>
+							<td><%= project.description %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

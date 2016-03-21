@@ -3,10 +3,6 @@ class Admin::ProjectsController < AdminController
 		@projects = Project.all
 	end
 
-	def show
-		@project = Project.find(params[:id])
-	end
-
 	def create
 		@project = Project.new(project_params)
 
@@ -25,6 +21,6 @@ class Admin::ProjectsController < AdminController
 	private
 
 	def project_params
-		params.require(:project).permit(:name, :description, :header, :thumb)
+		params.require(:project).permit(:name, :description, :header, :thumb, :project_type)
 	end
 end

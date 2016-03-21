@@ -1,0 +1,19 @@
+<%= simple_form_for [:admin, @project] do |f| %>
+	<div class="col-md-6">
+	  <%= f.input :name, label: 'Project Name', error: 'Project name is mandatory, please specify one' %>
+	</div>
+	<div class="col-md-6">
+		<%= f.input :project_type, collection: ["development", "interaction", "print"] %>
+	</div>
+	<div class="col-md-12">
+	  <%= f.input :description %>
+	</div>
+  <div class="col-md-6">
+  	<%= f.input :thumb, as: :file %>
+  </div>
+  <div class="col-md-6">
+  	<%= f.input :header, as: :file %>
+  </div>
+
+  <%= f.button :submit %>
+<% end %>
