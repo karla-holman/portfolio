@@ -1,0 +1,61 @@
+<!-- Header Carousel -->
+<div id="carousel-header" class="carousel slide" data-ride="carousel" style="height: 50%; max-height: 500px; overflow: hidden">
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="col-sm-1 hidden-xs">
+      </div>
+      <div class="col-sm-5">
+        <h1 style="color: #89a575">Web Development</h1>
+      </div>
+    </div>
+  </div>
+
+</div><!-- Carousel -->
+
+
+<!-- MixItUp Controls design -->
+<div class="gray" id="mix-control">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Select Project Type</h1>
+      </div>
+      <div class="col-md-6">
+        <button class="filter btn btn-default" data-filter="all">Show All</button>
+        <button class="filter btn btn-success" data-filter=".development">Development</button>
+        <button class="filter btn btn-primary" data-filter=".interaction">Interaction</button>
+        <button class="filter btn btn-info" data-filter=".print">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div id="Container">
+      <div class="mix development col-md-3" data-myorder="1">
+          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
+
+      </div>
+      <div class="mix interaction col-md-3" data-myorder="2">
+
+          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
+
+      </div>
+      <div class="mix interaction col-md-3" data-myorder="3">
+
+          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
+     
+      </div>
+      <div class="mix print col-md-3" data-myorder="4">
+    
+          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
+     
+      </div>
+    </div>
+  </div>
+
+</div>

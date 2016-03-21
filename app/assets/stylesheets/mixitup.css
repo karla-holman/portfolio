@@ -1,0 +1,30 @@
+#Container .mix{
+    display: none;
+}
+
+#mix-control h1 {
+	margin: 0;
+}
+
+#mix-control .row {
+	padding: 0;
+}
+
+#mix-control [class*="col-"] {
+	padding-bottom: 20px;
+}
+
+/************** BORDERS ****************/
+
+#Container .development img {
+    border-left: 10px #89a575 solid;
+}
+
+#Container .interaction img {
+    border-left: 10px #e2b6d5 solid;
+}
+
+#Container .print img {
+    border-left: 10px #966a89 solid;
+}
+

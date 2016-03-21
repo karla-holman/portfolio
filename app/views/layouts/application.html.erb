@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render 'layouts/nav' %>
+
+	<%= yield %>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 center" style="padding: 10px 0">
+				 	&#169; Karla Pollowitz 2016 &#8226; holmankarla@gmail.com
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
+</body>
+</html>

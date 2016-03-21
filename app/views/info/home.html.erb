@@ -1,0 +1,58 @@
+<div class="main-image" style="background-image: url(<%= asset_path('about/karla-and-jacob.jpg') %>)" >
+  <%= image_tag "logo-text.png", style: "width: 30%; height: auto" %>
+</div>
+
+<!-- Web design -->
+<div class="container">
+  <div class="row center">
+    <h2>What I Do</h2>
+    <div class="col-xm-12 col-sm-6 col-md-4">
+      <%= image_tag "categories/dev.png", alt: "Development", class: "icon-small" %>
+      <h3>Web Development</h3>
+      <p>Knowledge of computer science from my bachelors degree and self taught skills in Ruby on Rails and front end development help me to </p>
+      <%= link_to "Development Work >", "/development" %>
+    </div>
+    <div class="col-xm-12 col-sm-6 col-md-4">
+      <%= image_tag "categories/interact.png", alt: "Development", class: "icon-small" %>
+      <h3>Interaction Design</h3>
+      <p>I use skills in user-centered design and the graphic arts to create intuitive and elegant solutions.</p>
+      <%= link_to "Interaction Design Work >", "/interaction" %>
+    </div>
+    <div class="col-xm-12 col-sm-6 col-md-4">
+      <%= image_tag "categories/print.png", alt: "Development", class: "icon-small" %>
+      <h3>Print Design</h3>
+      <p>Although my passion is in interaction design, I also enjoy print design and find that it keeps my visual and typography skills sharp.</p>
+      <%= link_to "Print Design Work >", "/print" %>
+    </div>
+  </div>
+</div>
+
+
+<!-- Web design -->
+<div class="color-wrapper purple">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 purple inverse">
+        <h3>About Me</h3>
+        <p>Coordinated with Boeing’s Usability Services team to improve UX of internal tools Integrated multiple software packages with enterprise-wide baseline using complex scripts Provided IT customer support for multiple internal teams and international Boeing Partners Documented processes, test plans, and checklists for developing and testing software packages.</p>
+        <%= link_to "My Background >", "/about" %>
+      </div>
+    </div>
+  </div>
+  <%= image_tag "about/karla-and-jacob.jpg", class: "full-img-right" %>
+</div>
+
+<script>
+  $(document).ready( function(){
+    $('.navbar').hide();
+  });
+  
+  // Handle fade in nav only on home page
+  $( window ).scroll( function() {
+    if($(window).scrollTop() > $('.main-image').first().height()) {
+      $('.navbar').fadeIn( "fast" );
+    } else {
+      $('.navbar').fadeOut( "fast" );
+    }
+  });
+</script>

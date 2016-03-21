@@ -1,0 +1,203 @@
+/************** Grid and Layout **************/
+
+body { 
+ 
+}
+
+[class*="col-"] {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.main-image {
+	width: 100%;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	margin-top: 0px;
+	background-attachment: fixed;
+   background-position: bottom;
+   text-align: center; 
+   padding-top: 15%;
+}
+
+div.color-wrapper {
+	overflow: hidden;
+	position: relative;
+	height: 400px;
+}
+
+div.half-wrapper-green {
+	background: linear-gradient(to right, #89a575 0%, #89a575 50%, #fff 50%, #fff 100%);
+}
+
+div.half-wrapper-pink {
+	background: linear-gradient(to right, #fff 0%, #fff 50%, #e2b6d5 50%, #e2b6d5 100%);
+}
+
+div.half-wrapper-purple {
+	background: linear-gradient(to right, #966a89 0%, #966a89 50%, #fff 50%, #fff 100%);
+}
+
+div.pink-mobile {
+	background-color: none;
+}
+
+div.purple-mobile {
+	background-color: none;
+}
+
+div.green-mobile {
+	background-color: none;
+}
+
+div.white-mobile {
+	background-color: none;
+}
+
+.pink {
+	background-color: #e2b6d5;
+}
+.pink a {
+	color: #966a89;
+}
+
+.purple {
+	background-color: #966a89;
+}
+.purple a {
+	color: #492c41;
+}
+
+.green {
+	background-color: #89a575;
+}
+
+.green a {
+	color: #455937;
+}
+
+.gray {
+	background-color: #DCE2E2;
+}
+
+.white {
+	background-color: #fff;
+}
+
+img.full-img-right {
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	bottom: 0;
+	float: right;
+}
+
+img.full-img-left {
+	position: relative;
+	width: 50%;
+	left: 0;
+	bottom: 0;
+	float: left;
+}
+
+img.full-img {
+	position: relative;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.third-right {
+	position: relative;
+	width: 75%;
+	left: 25%;
+	top: 0;
+	float: right;
+	padding: 0;
+}
+
+.icon {
+	width: 100%;
+}
+
+.icon-small {
+	width: 25%;
+}
+
+.project {
+	margin: 0;
+	padding: 0;
+}
+
+/************** Typography **************/
+
+h2::after {
+	width: 80px;
+	height: 1px;
+	background-color: #89A575;
+	margin: 10px auto;
+	position: relative;
+	content: "";
+	display: block;
+}
+.inverse {
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+	opacity: 0.5;
+}
+
+.center {
+	text-align: center;
+}
+
+/********* Bootstrap Elements ***********/
+.carousel-control {
+	// Hover/focus state
+	&:hover,
+	&:focus {
+		background: none;
+	}
+}
+
+#carousel-header .item {
+	min-height: 400px;
+}
+
+.row {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/************** MEDIA QUERIES ************/
+@media (max-width: $screen-xs) {
+	div.pink-mobile {
+		background-color: #e2b6d5;
+	}
+
+	div.purple-mobile {
+		background-color: #966a89;
+	}
+
+	div.green-mobile {
+		background-color: #89a575;
+	}
+
+	div.white-mobile {
+		background-color: #fff;
+	}
+
+	img.full-img-right, img.full-img-left {
+		position: relative;
+		width: 100%;
+		left: 0;
+		top: 0;
+		bottom: auto;
+	}
+}
