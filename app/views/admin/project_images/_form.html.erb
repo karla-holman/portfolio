@@ -1,0 +1,13 @@
+<%= simple_form_for [:admin, @project, @image] do |f| %>
+	<div class="col-md-12">
+		<%= f.input :name, label: 'Image Name', error: 'Image name is mandatory, please specify one' %>
+	</div>
+	<div class="col-md-12">
+		<%= f.input :description, label: 'Image Description', error: 'Image description is mandatory, please specify one' %>
+	</div>
+	<div class="col-md-12">
+		<%= f.input :attachment, as: :file %>
+	</div>
+
+	<%= f.button :submit %>
+<% end %>

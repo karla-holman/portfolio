@@ -1,6 +1,8 @@
 class Admin::ProjectsController < AdminController
+	before_filter :set_projects
+
 	def index
-		@projects = Project.all
+		
 	end
 
 	def create
@@ -18,7 +20,16 @@ class Admin::ProjectsController < AdminController
 		@project = Project.new
 	end
 
+	def destroy
+		Project.find(params[:id]).destroy
+		render :index
+	end
+
 	private
+
+	def set_projects
+		@projects = Project.all
+	end
 
 	def project_params
 		params.require(:project).permit(:name, :description, :header, :thumb, :project_type)

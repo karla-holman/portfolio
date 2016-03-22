@@ -9,5 +9,6 @@ class InfoController < ApplicationController
 
 	def work
 		@current = "work"
+		@projects = Project.all
 	end
 end

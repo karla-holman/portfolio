@@ -28,7 +28,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # paperclip for image attachments
 gem "paperclip", "~> 4.3"
-gem 'aws-sdk', '~> 1.6'
+gem 'aws-sdk', '< 2.0'
 
 # Simpleform
 gem 'simple_form'

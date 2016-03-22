@@ -161,6 +161,17 @@ a:hover {
 	min-height: 400px;
 }
 
+#carousel-header .title {
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 3em;
+	font-weight: 700;
+	top: 25%;
+	z-index: 99;
+}
+
 .row {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -169,6 +180,15 @@ a:hover {
 .navbar-brand {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+/************* PROJECT ******************/
+.project p {
+	font-size: ceil(($font-size-base * 1.7));
+}
+
+.project .image {
+	text-align: center;
 }
 
 /************** MEDIA QUERIES ************/

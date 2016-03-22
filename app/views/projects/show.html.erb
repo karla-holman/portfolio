@@ -1,5 +1,49 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<h2><%= @project.name %></h2>
+<!-- Header Carousel -->
+<div id="carousel-header" class="carousel slide" data-ride="carousel" style="height: 50%; max-height: 500px; overflow: hidden">
+	<div class="title">
+		<h1><%= @project.name %></h1>
+		<h5>A <%= @project.project_type.capitalize %> Project</h5>
+	</div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag @project.header.url(:large), alt: @project.name, class: "icon" %>
+    </div>
+  </div>
+
+</div><!-- Carousel -->
+
+
+<% @project.project_images.each_with_index do |image, index| %>
+	<% if (index).odd? %>
+		<div class="gray project">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6" style="text-align: right">
+						<h3><%= image.name %></h3>
+						<p><%= image.description %></p>
+					</div>
+					<div class="col-md-6 image">
+						<%= image_tag image.attachment.url(:large), alt: image.name, class: "icon" %>
+					</div>
+				</div>
+			</div>
 		</div>
+	<% else %>
+		<div class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 image">
+						<%= image_tag image.attachment.url(:large), alt: image.name, class: "icon" %>
+					</div>
+					<div class="col-md-6">
+						<h3><%= image.name %></h3>
+						<p><%= image.description %></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+<% end %>
+
+			

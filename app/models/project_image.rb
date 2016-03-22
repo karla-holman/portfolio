@@ -1,6 +1,16 @@
 class ProjectImage < ActiveRecord::Base
-	has_attached_file :thumb, styles: { 
-			thumb: "400x300>"
-	}, default_url: "/images/:style/missing.png"
-   validates_attachment_content_type :header, content_type: /\Aimage\/.*\Z/
+		belongs_to :project
+		
+		has_attached_file :attachment,
+                  styles: { 
+                  	large: "1000x500>"
+                  },
+                  default_style: :large,
+                  url: '/projects/:id/:style/:basename.:extension',
+                  convert_options: { all: '-strip -auto-orient -colorspace sRGB' },
+                  :storage => :s3,
+                  :s3_credentials => Rails.root.join("config/aws.yml")
+    validates_attachment :attachment,
+      :presence => true,
+      :content_type => { :content_type => %w(image/jpeg image/jpg image/png image/gif) }
 end

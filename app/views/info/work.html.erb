@@ -36,26 +36,11 @@
 <div class="container">
   <div class="row">
     <div id="Container">
-      <div class="mix development col-md-3" data-myorder="1">
-          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
-
-      </div>
-      <div class="mix interaction col-md-3" data-myorder="2">
-
-          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
-
-      </div>
-      <div class="mix interaction col-md-3" data-myorder="3">
-
-          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
-     
-      </div>
-      <div class="mix print col-md-3" data-myorder="4">
-    
-          <%= image_tag "projects/jcauto-dev.png", alt: "JC Auto Restoration", class: "icon" %>
-     
-      </div>
+      <% @projects.each do |project| %>
+        <div class="mix <%= project.project_type %> col-md-3" data-myorder="1">
+            <%= image_tag project.thumb.url(:thumb), alt: project.name, class: "icon" %>
+        </div>
+      <% end %>
     </div>
   </div>
-
 </div>
