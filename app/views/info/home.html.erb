@@ -1,46 +1,77 @@
-<div class="main-image" style="background-image: url(<%= asset_path('about/karla-and-jacob.jpg') %>)" >
+<div class="main-image" style="background-image: url(<%= asset_path('about/header.jpg') %>)" >
   <%= image_tag "logo-text.png", style: "width: 30%; height: auto" %>
 </div>
 
-<!-- Web design -->
-<div class="container">
-  <div class="row center">
-    <h2>What I Do</h2>
-    <div class="col-xm-12 col-sm-6 col-md-4">
-      <%= image_tag "categories/dev.png", alt: "Development", class: "icon-small" %>
-      <h3>Web Development</h3>
-      <p>Knowledge of computer science from my bachelors degree and self taught skills in Ruby on Rails and front end development help me to </p>
-      <%= link_to "Development Work >", "/development" %>
-    </div>
-    <div class="col-xm-12 col-sm-6 col-md-4">
-      <%= image_tag "categories/interact.png", alt: "Development", class: "icon-small" %>
-      <h3>Interaction Design</h3>
-      <p>I use skills in user-centered design and the graphic arts to create intuitive and elegant solutions.</p>
-      <%= link_to "Interaction Design Work >", "/interaction" %>
-    </div>
-    <div class="col-xm-12 col-sm-6 col-md-4">
-      <%= image_tag "categories/print.png", alt: "Development", class: "icon-small" %>
-      <h3>Print Design</h3>
-      <p>Although my passion is in interaction design, I also enjoy print design and find that it keeps my visual and typography skills sharp.</p>
-      <%= link_to "Print Design Work >", "/print" %>
-    </div>
-  </div>
-</div>
-
-
-<!-- Web design -->
-<div class="color-wrapper purple">
+<!-- About Me -->
+<div class="clearfix"></div>
+<div style="position: relative">
+  <div class="flowers"></div>
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 purple inverse">
-        <h3>About Me</h3>
-        <p>Coordinated with Boeing’s Usability Services team to improve UX of internal tools Integrated multiple software packages with enterprise-wide baseline using complex scripts Provided IT customer support for multiple internal teams and international Boeing Partners Documented processes, test plans, and checklists for developing and testing software packages.</p>
-        <%= link_to "My Background >", "/about" %>
+    <div class="row center">
+      <div class="col-md-12" style="margin-bottom: 70px;">
+        <h2 style="color: #89a575">About Me</h2>
+        <h4>
+          I am part designer and part computer nerd living, working, and studying in the Seattle area.
+        </h4> 
+        <p>
+          Although I have a background in Computer Science, I have always had a passion for design and creativity. These days I am filling my time with online training, working with clients, and building an e-commerce website. Otherwise you can find me marathon training out on Seattle's beautiful trails.
+        </p>
       </div>
     </div>
   </div>
-  <%= image_tag "about/karla-and-jacob.jpg", class: "full-img-right" %>
 </div>
+
+<!-- Web design -->
+<div class="color-wrapper dark-gray">
+  <div class="container">
+    <div class="row center inverse">
+      <div class="col-xm-12 col-sm-6 col-md-4">
+        <%= image_tag "categories/dev.png", alt: "Development", class: "icon-small" %>
+        <h3>Web Development</h3>
+        <p>Knowledge of computer science from my bachelors degree and self taught skills in Ruby on Rails and front end development help me to </p>
+      </div>
+      <div class="col-xm-12 col-sm-6 col-md-4">
+        <%= image_tag "categories/interact.png", alt: "Development", class: "icon-small" %>
+        <h3>Interaction Design</h3>
+        <p>I use skills in user-centered design and the graphic arts to create intuitive and elegant solutions.</p>
+      </div>
+      <div class="col-xm-12 col-sm-6 col-md-4">
+        <%= image_tag "categories/print.png", alt: "Development", class: "icon-small" %>
+        <h3>Print Design</h3>
+        <p>Although my passion is in interaction design, I also enjoy print design and find that it keeps my visual and typography skills sharp.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="work">
+  <div class="title inverse center">
+    <h3>My Portfolio</h3>
+  </div>
+  <button class="pink">Test</button>
+  <button class="green">Test</button>
+  <button class="purple">Test</button>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row inverse center">
+      <div class="col-md-6">
+        <p>Copyright 2016 Karla Pollowitz</p>
+      </div>
+      <div class="col-md-6">
+        <p>Social Icons</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script>
   $(document).ready( function(){

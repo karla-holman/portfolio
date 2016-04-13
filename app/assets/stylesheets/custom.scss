@@ -77,8 +77,8 @@ div.white-mobile {
 	color: #455937;
 }
 
-.gray {
-	background-color: #DCE2E2;
+.dark-gray {
+	background-color: #474647;
 }
 
 .white {
@@ -133,6 +133,22 @@ img.full-img {
 	padding: 0;
 }
 
+.flowers {
+	position: absolute;
+	bottom: 0;
+	background: url(about/flowers.svg);
+  	background-size: 480px 200px;
+	background-repeat: repeat-x;
+	min-height: 200px;
+	width: 100%;
+	opacity: 0.30;
+	background-position: center;
+}
+
+.footer {
+	background-color: #474647;
+	height: 100px;
+}
 /************** Typography **************/
 
 .inverse {
@@ -148,6 +164,57 @@ a:hover {
 	text-align: center;
 }
 
+h3 {
+	color: #e2b6d5;
+}
+
+h4 {
+	font-weight: 400;
+}
+
+/*************** WORK SECTION ***********/
+.work {
+	width: 100%;
+	margin: 0;
+}
+.tile {
+	box-sizing: border-box;
+	margin: 0px;
+	border: solid 10px #fff;
+	width: 25%;
+	background-color: #455937;
+	min-height: 300px;
+	float: left;
+}
+
+.work:nth-child(1) {
+	border-left: solid 20px #fff;
+}
+
+.work button {
+	box-sizing: border-box;
+	margin: 0px;
+	border: solid 10px #fff;
+	width: 25%;
+	min-height: 100px;
+	float: left;
+	color: #fff;
+}
+
+.work .title {
+	box-sizing: border-box;
+	margin: 0px;
+	border: solid 10px #fff;
+	width: 25%;
+	min-height: 100px;
+	float: left;
+	padding: 20px;
+	background-color: #fff;
+}
+
+.work h3, h4 {
+	margin: 0;
+}
 /********* Bootstrap Elements ***********/
 .carousel-control {
 	// Hover/focus state
@@ -173,8 +240,8 @@ a:hover {
 }
 
 .row {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 40px;
+	padding-bottom: 30px;
 }
 
 .navbar-brand {
@@ -215,5 +282,9 @@ a:hover {
 		left: 0;
 		top: 0;
 		bottom: auto;
+	}
+
+	.tile {
+		width: 100%;
 	}
 }
