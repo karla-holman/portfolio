@@ -77,6 +77,11 @@ div.white-mobile {
 	color: #455937;
 }
 
+.light-green {
+	background-color: #D1E7C5;
+	color: #474647;
+}
+
 .dark-gray {
 	background-color: #474647;
 }
@@ -145,9 +150,13 @@ img.full-img {
 	background-position: center;
 }
 
-.footer {
-	background-color: #474647;
-	height: 100px;
+.contact {
+	background-image: url('contact.jpg');
+	min-height: 400px;
+	background-repeat: none;
+	background-position: top;
+	background-attachment: fixed;
+	// background-size: cover;
 }
 /************** Typography **************/
 
@@ -170,6 +179,7 @@ h3 {
 
 h4 {
 	font-weight: 400;
+	line-height: 1.4em;
 }
 
 /*************** WORK SECTION ***********/
@@ -180,11 +190,59 @@ h4 {
 .tile {
 	box-sizing: border-box;
 	margin: 0px;
-	border: solid 10px #fff;
+	border: solid 5px #fff;
 	width: 25%;
 	background-color: #455937;
 	min-height: 300px;
 	float: left;
+	position: relative;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.8);
+	-webkit-transition: background-color 1s ease;
+	-moz-transition: background-color 1s ease;
+	transition: background-color 1s ease;
+}
+
+.work-hover {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: none;
+	z-index: 100;
+}
+
+.tile-text {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	opacity: 1;
+	padding: 0 20px;
+	z-index: 10;
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	top: 20%;
+}
+
+.tile-text img {
+	width: 25%;
 }
 
 .work:nth-child(1) {
@@ -199,6 +257,32 @@ h4 {
 	min-height: 100px;
 	float: left;
 	color: #fff;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+	padding: none;
+	/* border-bottom: none; // solid 10px #fff;
+	border-left: none;
+	border-top: none;
+	border-right: none; */
+	border-radius: 0;
+}
+
+.work button:hover {
+	background-color: #C9C6C6;
+	color: #474647;
+	border: solid 10px #fff;
+}
+
+.work button.active {
+	border: solid 10px #fff;
+}
+
+.work button.active:hover {
+	border: solid 10px #fff;
 }
 
 .work .title {
@@ -247,6 +331,38 @@ h4 {
 .navbar-brand {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.navbar {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+}
+#first-nav {
+	background: none;
+	border: none;
+	color: #fff;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+}
+
+#first-nav li a, #first-nav p {
+	color: #fff;
+	background: none;
+}
+
+footer {
+	background-color: #474647;
+	color: white; 
+	height: 100px;
+	padding-top: 20px;
 }
 
 /************* PROJECT ******************/

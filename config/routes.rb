@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   end
 
   resources :projects, only: :show
+
+  match '/contacts', to: 'contacts#new', via: 'get' 
+  resources "contacts", only: [:new, :create]
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products

@@ -45,45 +45,198 @@
 </div>
 
 <div class="work">
-  <div class="title inverse center">
-    <h3>My Portfolio</h3>
+  <!-- Buttons to sort work -->
+  <div id="mix-control">
+    <button class="filter btn btn-default light-green" data-filter="all">All Work</button>
+    <button class="filter btn btn-default pink" data-filter=".dev">Development</button>
+    <button class="filter btn btn-default green" data-filter=".ui">UI Design</button>
+    <button class="filter btn btn-default purple" data-filter=".print">Print Design</button>
   </div>
-  <button class="pink">Test</button>
-  <button class="green">Test</button>
-  <button class="purple">Test</button>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <div class="row inverse center">
-      <div class="col-md-6">
-        <p>Copyright 2016 Karla Pollowitz</p>
-      </div>
-      <div class="col-md-6">
-        <p>Social Icons</p>
+
+  <!-- Work tiles -->
+  <div id="Container">
+    <div class="tile mix dev" style="background-image: url('<%= asset_path("projects/jcauto/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "pink-flower.svg" %>
+        <h2>JC Auto Restoration</h2>
+        <h4>Website Design & Development</h4>
       </div>
     </div>
+    
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/cityu/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>City University</h2>
+        <h4>Website Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/inrix/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>INRIX Careers</h2>
+        <h4>Website Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/marionnaud/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>Marionnaud</h2>
+        <h4>Landing Page Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/docu/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>Docusign</h2>
+        <h4>Social Ad Banners</h4>
+      </div>
+    </div>
+
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/aro1/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>AT&T ARO</h2>
+        <h4>Animated Banner Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/aro2/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>AT&T ARO</h2>
+        <h4>Banner Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/office/thumb.png")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>Microsoft Office</h2>
+        <h4>Banner Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix print" style="background-image: url('<%= asset_path("projects/wine/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "purple-flower.svg" %>
+        <h2>Amelia Wynn</h2>
+        <h4>Wine Label Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix print" style="background-image: url('<%= asset_path("projects/artist/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "purple-flower.svg" %>
+        <h2>Thomas Kinkade</h2>
+        <h4>Artist Booklet Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix print" style="background-image: url('<%= asset_path("projects/fresh/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "purple-flower.svg" %>
+        <h2>Fresh Air Fitness</h2>
+        <h4>Poster Designs</h4>
+      </div>
+    </div>
+
+    <div class="tile mix print" style="background-image: url('<%= asset_path("projects/line/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "purple-flower.svg" %>
+        <h2>Hotel Del Coronado</h2>
+        <h4>Line Art</h4>
+      </div>
+    </div>
+
+    <div class="tile mix print" style="background-image: url('<%= asset_path("projects/invitation/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "purple-flower.svg" %>
+        <h2>Parisian Wedding</h2>
+        <h4>Invitation Design</h4>
+      </div>
+    </div>
+
+  </div><!-- Mix Container -->
+</div>
+<div class="clearfix"></div>
+
+<div class="contact inverse">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Contact Information</h3>
+        <h4>holmankarla@gmail.com</h4>
+        <h4>206.915.1646</h4>
+        <h4>Shoreline, WA</h4>
+
+        <h4>
+          <%= link_to 'Resume', root_url+'resume.pdf', { target: '_blank' } %>
+        </h4>
+      </div>
+
+      <div class="col-md-8">
+        <h3>Contact Me</h3>
+        <%= simple_form_for @contact do |f| %>
+          <%= f.input :name, :required => true %>
+          <%= f.input :email, :required => true %>
+          <%= f.input :message, :as => :text, :required => true %>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div>
+            </br>
+            <%= f.button :submit, 'Send message', :class=> "btn btn-success" %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
-</footer>
+</div>
 
 <script>
-  $(document).ready( function(){
-    $('.navbar').hide();
+  $( document ).ready(function(){
+    // If page is not loaded already scrolled
+    if($(window).scrollTop <= $('.navbar').height()){
+      $('.navbar').attr("id", "first-nav");
+    }
   });
-  
+
   // Handle fade in nav only on home page
   $( window ).scroll( function() {
-    if($(window).scrollTop() > $('.main-image').first().height()) {
-      $('.navbar').fadeIn( "fast" );
+    if($(window).scrollTop() > $('.navbar').height()) {
+      $('.navbar').attr("id", "");
     } else {
-      $('.navbar').fadeOut( "fast" );
+      $('.navbar').attr("id", "first-nav");
     }
   });
 </script>

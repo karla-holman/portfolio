@@ -14,17 +14,3 @@
 	padding-bottom: 20px;
 }
 
-/************** BORDERS ****************/
-
-#Container .development img {
-    border-left: 10px #89a575 solid;
-}
-
-#Container .interaction img {
-    border-left: 10px #e2b6d5 solid;
-}
-
-#Container .print img {
-    border-left: 10px #966a89 solid;
-}
-

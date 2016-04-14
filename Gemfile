@@ -34,6 +34,7 @@ gem 'aws-sdk', '< 2.0'
 
 # Simpleform
 gem 'simple_form'
+gem 'mail_form'
 
 # Devise
 gem 'devise'

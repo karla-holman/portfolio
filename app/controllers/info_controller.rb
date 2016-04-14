@@ -1,6 +1,7 @@
 class InfoController < ApplicationController
 	def home
 		@current = "home"
+		@contact = Contact.new
 	end
 
 	def about
