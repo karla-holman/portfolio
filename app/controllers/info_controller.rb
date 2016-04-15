@@ -14,7 +14,6 @@ class InfoController < ApplicationController
 	end
 
 	def contact
-		byebug
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
