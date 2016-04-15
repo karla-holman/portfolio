@@ -1,5 +1,5 @@
 <div class="main-image" style="background-image: url(<%= asset_path('about/header.jpg') %>)" >
-  <%= image_tag "logo-text.png", style: "width: 30%; height: auto" %>
+  <%= image_tag "logo-text.png", style: "width: 30%; height: auto; min-width: 400px" %>
 </div>
 
 <!-- About Me -->
@@ -10,11 +10,11 @@
     <div class="row center">
       <div class="col-md-12" style="margin-bottom: 70px;">
         <h2 style="color: #89a575">About Me</h2>
-        <h4>
-          I am part designer and part computer nerd living, working, and studying in the Seattle area.
+        <h4 style="margin-bottom: 10px">
+          I am part designer, part developer living, working, and studying in the Seattle area.
         </h4> 
         <p>
-          Although I have a background in Computer Science, I have always had a passion for design and creativity. These days I am filling my time with online training, working with clients, and building an e-commerce website. Otherwise you can find me marathon training out on Seattle's beautiful trails.
+          I believe the brain can be equally left and right dominant. Although I have a background in Computer Science, I have always had a passion for design and creativity. These days I am filling my time with online training, working with clients, and building and promoting an e-commerce website for an auto restoration company. In the remaining free time you can find me marathon training out on Seattle's beautiful trails.
         </p>
       </div>
     </div>
@@ -47,7 +47,7 @@
 <div class="work">
   <!-- Buttons to sort work -->
   <div id="mix-control">
-    <button class="filter btn btn-default light-green" data-filter="all">All Work</button>
+    <button class="filter btn btn-default light-green all-work" data-filter="all">All Work</button>
     <button class="filter btn btn-default pink" data-filter=".dev">Development</button>
     <button class="filter btn btn-default green" data-filter=".ui">UI Design</button>
     <button class="filter btn btn-default purple" data-filter=".print">Print Design</button>
@@ -55,26 +55,31 @@
 
   <!-- Work tiles -->
   <div id="Container">
-    <div class="tile mix dev" style="background-image: url('<%= asset_path("projects/jcauto/thumb.png")%>');" data-myorder="1">
-      <div class="work-hover"></div>
-      <div class="overlay"></div>
-      <div class="tile-text">
-        <%= image_tag "pink-flower.svg" %>
-        <h2>JC Auto Restoration</h2>
-        <h4>Website Design & Development</h4>
+    <%= link_to "http://jcauto.com", target: "_blank" do %>
+      <div class="tile mix dev" style="background-image: url('<%= asset_path("projects/jcauto/thumb.png")%>');" data-myorder="1">
+        <div class="work-hover"></div>
+        <div class="overlay"></div>
+        <div class="tile-text">
+          <%= image_tag "pink-flower.svg" %>
+          <h2>JC Auto Restoration</h2>
+          <h4>Design & Development</h4>
+        </div>
       </div>
-    </div>
+    <% end %>
     
-    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/cityu/thumb.png")%>');" data-myorder="1">
-      <div class="work-hover"></div>
-      <div class="overlay"></div>
-      <div class="tile-text">
-        <%= image_tag "green-flower.svg" %>
-        <h2>City University</h2>
-        <h4>Website Design</h4>
+    <%= link_to "https://www.behance.net/gallery/24701767/City-University-Website-Redesign", target: "_blank" do %>
+      <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/cityu/thumb.png")%>');" data-myorder="1">
+        <div class="work-hover"></div>
+        <div class="overlay"></div>
+        <div class="tile-text">
+          <%= image_tag "green-flower.svg" %>
+          <h2>City University</h2>
+          <h4>Website Design</h4>
+        </div>
       </div>
-    </div>
+    <% end %>
 
+    <%= link_to "https://www.behance.net/gallery/21913485/INRIX-Careers-Website-Redesign", target: "_blank" do %>
     <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/inrix/thumb.png")%>');" data-myorder="1">
       <div class="work-hover"></div>
       <div class="overlay"></div>
@@ -84,7 +89,9 @@
         <h4>Website Design</h4>
       </div>
     </div>
+    <% end %>
 
+    <%= link_to "https://www.behance.net/gallery/21920311/Marionnaud-Landing-Page-Design", target: "_blank" do %>
     <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/marionnaud/thumb.png")%>');" data-myorder="1">
       <div class="work-hover"></div>
       <div class="overlay"></div>
@@ -94,7 +101,9 @@
         <h4>Landing Page Design</h4>
       </div>
     </div>
+    <% end %>
 
+    <%= link_to "https://www.behance.net/gallery/24702277/DocuSign-Social-Ad-Banners", target: "_blank" do %>
     <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/docu/thumb.png")%>');" data-myorder="1">
       <div class="work-hover"></div>
       <div class="overlay"></div>
@@ -104,7 +113,9 @@
         <h4>Social Ad Banners</h4>
       </div>
     </div>
+    <% end %>
 
+    <%= link_to "https://www.behance.net/gallery/21830671/AT-T-ARO-Animated-Banners", target: "_blank" do %>
     <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/aro1/thumb.png")%>');" data-myorder="1">
       <div class="work-hover"></div>
       <div class="overlay"></div>
@@ -114,7 +125,9 @@
         <h4>Animated Banner Design</h4>
       </div>
     </div>
+    <% end %>
 
+    <%= link_to "https://www.behance.net/gallery/21832457/AT-T-ARO-Banner-Refresh", target: "_blank" do %>
     <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/aro2/thumb.png")%>');" data-myorder="1">
       <div class="work-hover"></div>
       <div class="overlay"></div>
@@ -124,7 +137,9 @@
         <h4>Banner Design</h4>
       </div>
     </div>
+    <% end %>
 
+    <%= link_to "https://www.behance.net/gallery/21921043/Microsoft-Office-365-Banners", target: "_blank" do %>
     <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/office/thumb.png")%>');" data-myorder="1">
       <div class="work-hover"></div>
       <div class="overlay"></div>
@@ -132,6 +147,17 @@
         <%= image_tag "green-flower.svg" %>
         <h2>Microsoft Office</h2>
         <h4>Banner Design</h4>
+      </div>
+    </div>
+    <% end %>
+
+    <div class="tile mix print" style="background-image: url('<%= asset_path("projects/album/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "purple-flower.svg" %>
+        <h2>Stitch an Ocean</h2>
+        <h4>Album Design</h4>
       </div>
     </div>
 
@@ -152,6 +178,16 @@
         <%= image_tag "purple-flower.svg" %>
         <h2>Thomas Kinkade</h2>
         <h4>Artist Booklet Design</h4>
+      </div>
+    </div>
+
+    <div class="tile mix print" style="background-image: url('<%= asset_path("projects/wedding/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "purple-flower.svg" %>
+        <h2>Wedding Design</h2>
+        <h4>Save the Date Design</h4>
       </div>
     </div>
 
@@ -205,7 +241,7 @@
 
       <div class="col-md-8">
         <h3>Contact Me</h3>
-        <%= simple_form_for @contact do |f| %>
+        <%= simple_form_for @contact, :url => "/contact" do |f| %>
           <%= f.input :name, :required => true %>
           <%= f.input :email, :required => true %>
           <%= f.input :message, :as => :text, :required => true %>
@@ -218,6 +254,13 @@
           </div>
         <% end %>
       </div>
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% elsif flash[:error] %>
+        <div class="error"><%= flash[:notice] %></div>
+      <% end %>
+
+      <div class="col-md-12">
 
     </div>
   </div>

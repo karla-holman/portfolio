@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'work' => 'info#work'
   get 'interaction' => 'info#interact'
   get 'print' => 'info#print'
+  post 'contact' => 'info#contact'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -29,8 +30,6 @@ Rails.application.routes.draw do
 
   resources :projects, only: :show
 
-  match '/contacts', to: 'contacts#new', via: 'get' 
-  resources "contacts", only: [:new, :create]
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products

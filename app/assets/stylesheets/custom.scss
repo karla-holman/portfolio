@@ -365,6 +365,18 @@ footer {
 	padding-top: 20px;
 }
 
+img.social {
+	width: 40px;
+	margin-right: 30px;
+}
+
+abbr[title] {
+	display: none;
+}
+
+.contact h4 {
+	margin-bottom: 10px;
+}
 /************* PROJECT ******************/
 .project p {
 	font-size: ceil(($font-size-base * 1.7));
@@ -375,32 +387,33 @@ footer {
 }
 
 /************** MEDIA QUERIES ************/
-@media (max-width: $screen-xs) {
-	div.pink-mobile {
-		background-color: #e2b6d5;
+@media (max-width: $screen-md) {
+	.tile {
+		width: 33.3%;
+	}
+	.work button {
+		width: 33.3%
 	}
 
-	div.purple-mobile {
-		background-color: #966a89;
-	}
-
-	div.green-mobile {
-		background-color: #89a575;
-	}
-
-	div.white-mobile {
-		background-color: #fff;
-	}
-
-	img.full-img-right, img.full-img-left {
-		position: relative;
+	.work button.all-work {
 		width: 100%;
-		left: 0;
-		top: 0;
-		bottom: auto;
 	}
+}
 
+@media (max-width: $screen-sm) {
+	.tile {
+		width: 50%;
+	}
+	.work button, .work button.all-work {
+		width: 50%
+	}
+}
+
+@media (max-width: $screen-xs) {
 	.tile {
 		width: 100%;
+	}
+	.work button, .work button.all-work {
+		width: 100%
 	}
 }
