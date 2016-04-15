@@ -261,11 +261,14 @@
           </div>
         <% end %>
       </div>
-      <% if flash[:notice] %>
-        <div class="notice"><%= flash[:notice] %></div>
-      <% elsif flash[:error] %>
-        <div class="error"><%= flash[:notice] %></div>
-      <% end %>
+      <div>
+        <% flash.each do |key, value| %>
+          <div>
+            <a href="#" data-dismiss="alert">×</a>
+              <%= value %>
+          </div>
+        <% end %>
+      </div>
 
       <div class="col-md-12">
 
