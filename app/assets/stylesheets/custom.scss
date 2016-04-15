@@ -421,4 +421,10 @@ abbr[title] {
 	.work button, .work button.all-work {
 		width: 100%
 	}
+	.contact {
+		max-height: 1000px; // fixed image display properly
+	}
+	.main-image {
+		max-height: 1000px; // fixed image display properly
+	}
 }
