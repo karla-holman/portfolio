@@ -24,7 +24,7 @@ body {
 div.color-wrapper {
 	overflow: hidden;
 	position: relative;
-	height: 400px;
+	// min-height: 400px;
 }
 
 div.half-wrapper-green {
@@ -361,7 +361,7 @@ h4 {
 footer {
 	background-color: #474647;
 	color: white; 
-	height: 100px;
+	min-height: 100px;
 	padding-top: 20px;
 }
 

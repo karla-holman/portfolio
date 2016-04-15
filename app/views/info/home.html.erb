@@ -3,9 +3,13 @@
 </div>
 
 <!-- About Me -->
+<a name="about"></a> 
 <div class="clearfix"></div>
 <div style="position: relative">
-  <div class="flowers"></div>
+  <div class="flowers" 
+    style="background-image: url(<%= asset_path('about/flowers.svg')%>)" >
+
+  </div>
   <div class="container">
     <div class="row center">
       <div class="col-md-12" style="margin-bottom: 70px;">
@@ -22,6 +26,7 @@
 </div>
 
 <!-- Web design -->
+<a name="skills"></a>
 <div class="color-wrapper dark-gray">
   <div class="container">
     <div class="row center inverse">
@@ -44,6 +49,7 @@
   </div>
 </div>
 
+<a name="work"></a>
 <div class="work">
   <!-- Buttons to sort work -->
   <div id="mix-control">
@@ -225,7 +231,8 @@
 </div>
 <div class="clearfix"></div>
 
-<div class="contact inverse">
+<a name="contact"></a>
+<div class="contact inverse" style="background-image: url(<%= asset_path('contact.jpg')%>)">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
