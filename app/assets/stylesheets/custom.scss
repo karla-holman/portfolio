@@ -156,7 +156,7 @@ img.full-img {
 	background-repeat: none;
 	background-position: top;
 	background-attachment: fixed;
-	// background-size: cover;
+	background-size: cover;
 }
 /************** Typography **************/
 
@@ -387,7 +387,7 @@ abbr[title] {
 }
 
 /************** MEDIA QUERIES ************/
-@media (max-width: $screen-md) {
+@media (max-width: $screen-lg-min) {
 	.tile {
 		width: 33.3%;
 	}
@@ -400,7 +400,7 @@ abbr[title] {
 	}
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-md-min) {
 	.tile {
 		width: 50%;
 	}
@@ -409,7 +409,12 @@ abbr[title] {
 	}
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-sm-min) {
+	body { 
+	 	max-width: $screen-sm-min;
+	 	overflow-x: hidden;
+	}
+
 	.tile {
 		width: 100%;
 	}
