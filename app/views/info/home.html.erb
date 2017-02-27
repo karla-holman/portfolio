@@ -3,10 +3,10 @@
 </div>
 
 <!-- About Me -->
-<a name="about"></a> 
+<a name="about"></a>
 <div class="clearfix"></div>
 <div style="position: relative">
-  <div class="flowers" 
+  <div class="flowers"
     style="background-image: url(<%= asset_path('about/flowers.svg')%>)" >
 
   </div>
@@ -16,7 +16,7 @@
         <h2 style="color: #89a575">About Me</h2>
         <h4 style="margin-bottom: 10px">
           I am part designer, part developer living, working, and studying in the Seattle area.
-        </h4> 
+        </h4>
         <p>
           I believe the brain can be equally left and right dominant. Although I have a background in Computer Science, I have always had a passion for design and creativity. These days I am filling my time with online training, working with clients, and building and promoting an e-commerce website for an auto restoration company. In the remaining free time you can find me marathon training out on Seattle's beautiful trails.
         </p>
@@ -61,6 +61,18 @@
 
   <!-- Work tiles -->
   <div id="Container">
+    <%= link_to "http://brown-bea-elasticl-b7oydx1u0ez-1743776495.us-west-2.elb.amazonaws.com/", target: "_blank" do %>
+      <div class="tile mix dev" style="background-image: url('<%= asset_path("projects/brown_bear/thumb.png")%>');" data-myorder="1">
+        <div class="work-hover"></div>
+        <div class="overlay"></div>
+        <div class="tile-text">
+          <%= image_tag "pink-flower.svg" %>
+          <h2>Brown Bear</h2>
+          <h4>Design & Development</h4>
+        </div>
+      </div>
+    <% end %>
+
     <%= link_to "http://jcauto.com", target: "_blank" do %>
       <div class="tile mix dev" style="background-image: url('<%= asset_path("projects/jcauto/thumb.png")%>');" data-myorder="1">
         <div class="work-hover"></div>
@@ -72,7 +84,7 @@
         </div>
       </div>
     <% end %>
-    
+
     <%= link_to "https://www.behance.net/gallery/24701767/City-University-Website-Redesign", target: "_blank" do %>
       <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/cityu/thumb.png")%>');" data-myorder="1">
         <div class="work-hover"></div>
@@ -117,6 +129,30 @@
         <%= image_tag "green-flower.svg" %>
         <h2>Docusign</h2>
         <h4>Social Ad Banners</h4>
+      </div>
+    </div>
+    <% end %>
+
+    <%= link_to root_url+'evernote.pdf', { target: '_blank' } do %>
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/user-centered-design/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>UW HCDE Project</h2>
+        <h4>Evernote Redesign Proposal</h4>
+      </div>
+    </div>
+    <% end %>
+
+    <%= link_to root_url+'usability-testing.pdf', target: '_blank' do %>
+    <div class="tile mix ui" style="background-image: url('<%= asset_path("projects/usability-testing/thumb.jpg")%>');" data-myorder="1">
+      <div class="work-hover"></div>
+      <div class="overlay"></div>
+      <div class="tile-text">
+        <%= image_tag "green-flower.svg" %>
+        <h2>UW HCDE Project</h2>
+        <h4>Parking Pay Station Usability Study</h4>
       </div>
     </div>
     <% end %>
