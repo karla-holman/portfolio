@@ -18,7 +18,7 @@
           I am part designer, part developer living, working, and studying in the Seattle area.
         </h4>
         <p>
-          I believe the brain can be equally left and right dominant. Although I have a background in Computer Science, I have always had a passion for design and creativity. These days I am filling my time with online training, working with clients, and building and promoting an e-commerce website for an auto restoration company. In the remaining free time you can find me marathon training out on Seattle's beautiful trails.
+          I believe the brain can be equally left and right dominant. Although I have a background in Computer Science, I have always had a passion for design and creativity. These days I am filling my time with online training, working with clients, and building websites for a North Seattle web design company. In the remaining free time you can find me marathon training out on Seattle's beautiful trails.
         </p>
       </div>
     </div>
@@ -61,6 +61,18 @@
 
   <!-- Work tiles -->
   <div id="Container">
+    <%= link_to "https://paladinoandco.com/", target: "_blank" do %>
+      <div class="tile mix dev" style="background-image: url('<%= asset_path("projects/paladino/thumb.png")%>');" data-myorder="1">
+        <div class="work-hover"></div>
+        <div class="overlay"></div>
+        <div class="tile-text">
+          <%= image_tag "pink-flower.svg" %>
+          <h2>Paladino</h2>
+          <h4>Design & Development (WordPress)</h4>
+        </div>
+      </div>
+    <% end %>
+
     <%= link_to "https://brownbear.com/", target: "_blank" do %>
       <div class="tile mix dev" style="background-image: url('<%= asset_path("projects/brown_bear/thumb.png")%>');" data-myorder="1">
         <div class="work-hover"></div>
